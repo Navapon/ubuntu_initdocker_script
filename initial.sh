@@ -21,6 +21,8 @@ sudo apt-get update
 apt-cache policy docker-ce
 # Install docker comunity edition
 sudo apt-get install -y docker-ce
+# Enables docker to auto start
+sudo systemctl enable docker
 # Check service status os docker 
 sudo systemctl status docker
 

@@ -24,7 +24,12 @@ sudo apt-get install -y docker-ce
 # Enables docker to auto start
 sudo systemctl enable docker
 # Check service status os docker 
-sudo systemctl status docker
+# sudo systemctl status docker
+
+################ Setpermission ######################
+#Add ubuntu and 1001 to docker group
+sudo usermod -a -G docker ubuntu
+sudo usermod -a -G docker 1001
 
 ################ Install docker-compose ################
 # Download a package docker-compose from official Repo to /usr/local/bin/docker-compose
@@ -34,8 +39,5 @@ sudo chmod +x /usr/local/bin/docker-compose
 # Check version for make sure installed
 docker-compose --version
 
-#Add ubuntu and 1001 to docker group
-sudo usermod -a -G docker ubuntu
-sudo usermod -a -G docker 1001
 
 exit
